@@ -1,1 +1,38 @@
-<p>register works!</p>
+<div class="container-sm border bg-light rounded p-5 mt-10 d-flex flex-column" style="max-width: 800px;">
+
+    <h1 class="align-self-center">Inicio de sesión</h1>
+
+    <div>
+        <form [formGroup]="registerForm" (ngSubmit)="registro()" class="d-flex flex-column">
+
+            <div class="mb-4">
+                <label class="form-label" for="name" >Nombre</label>
+                <input class="form-control" type="text" name="text" id="userName" [formControl]="name">
+            </div>
+
+            <div class="mb-4">
+                <label class="form-label" for="email" >Correo electrónico</label>
+                <input class="form-control" type="email" name="email" id="userEmail" [formControl]="email">
+            </div>
+
+            <div class="mb-4">
+                <label class="form-label" for="password1">Contraseña</label>
+                <input class="form-control" type="password" name="password1" id="userPasword1" [formControl]="password1">
+            </div>
+
+            <div class="mb-4">
+                <label class="form-label" for="password2">Confirmar Contraseña</label>
+                <input class="form-control" type="password" name="password2" id="userPasword2" [formControl]="password2">
+            </div>
+
+            <button 
+                class="btn btn-outline-primary align-self-center w-25" 
+                type="submit" 
+                [disabled]="!registerForm.valid">
+                Registrarse
+            </button>
+
+        </form>
+    </div>
+
+</div>
