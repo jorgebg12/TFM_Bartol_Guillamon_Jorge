@@ -1,1 +1,19 @@
-<p>card works!</p>
+<div class="card" style="width: 400px;">
+    <img src="{{technique.image}}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <p class="card-text">{{technique.name}}</p>
+      <button class="btn">Check</button>
+      <div [ngClass]="{
+        'white-belt': technique.belt === belts.white,
+        'yellow-belt': technique.belt === belts.white,
+        'orange-belt': technique.belt === belts.white,
+        'green-belt': technique.belt === belts.white,
+        'blue-belt': technique.belt === belts.white,
+        'red-belt': technique.belt === belts.white,
+        'black-belt': technique.belt === belts.white,
+        'superior-belt': technique.belt === belts.white,
+      }">
+
+      </div>
+    </div>
+  </div>
