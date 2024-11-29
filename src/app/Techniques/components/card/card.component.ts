@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Belt, TechniqueDTO } from '../../../Models/technique.dto';
 
 @Component({
@@ -6,7 +6,7 @@ import { Belt, TechniqueDTO } from '../../../Models/technique.dto';
   templateUrl: './card.component.html',
   styleUrl: './card.component.scss',
 })
-export class CardComponent {
+export class CardComponent implements OnInit {
   belts = Belt;
   technique: TechniqueDTO;
 
@@ -14,9 +14,10 @@ export class CardComponent {
     this.technique = new TechniqueDTO(
       1,
       'prueba',
-      'prueba',
+      '/image-placeholder.jpg',
       'prueba',
       Belt.white
     );
   }
+  ngOnInit(): void {}
 }
