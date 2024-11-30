@@ -1,0 +1,90 @@
+[
+    {
+        "id" : 1,
+        "name" : "Ap Chagui",
+        "image" : "/image-placeholder.jpg",
+        "type" : "patada",
+        "belt": "yellow",
+        "marked" : false
+    },
+    {
+        "id" : 2,
+        "name" : "Dollyo Chagui",
+        "image" : "/image-placeholder.jpg",
+        "type" : "patada",
+        "belt": "yellow",
+        "marked" : false
+    },
+    {
+        "id" : 3,
+        "name" : "Yop Chagui",
+        "image" : "/image-placeholder.jpg",
+        "type" : "patada",
+        "belt": "yellow",
+        "marked" : false
+    },
+    {
+        "id" : 4,
+        "name" : "Tuit Chagui",
+        "image" : "/image-placeholder.jpg",
+        "type" : "patada",
+        "belt": "orange",
+        "marked" : false
+    },
+    {
+        "id" : 5,
+        "name" : "Neryo Chagui",
+        "image" : "/image-placeholder.jpg",
+        "type" : "patada",
+        "belt": "orange",
+        "marked" : false
+    },
+    {
+        "id" : 6,
+        "name" : "Mondollyo Yop Chagui",
+        "image" : "/image-placeholder.jpg",
+        "type" : "patada",
+        "belt": "orange",
+        "marked" : false
+    },
+    {
+        "id" : 7,
+        "name" : "Mondollyo Tuit Chagui",
+        "image" : "/image-placeholder.jpg",
+        "type" : "patada",
+        "belt": "green",
+        "marked" : false
+    },
+    {
+        "id" : 8,
+        "name" : "Nacko Chagui",
+        "image" : "/image-placeholder.jpg",
+        "type" : "patada",
+        "belt": "blue",
+        "marked" : false
+    },
+    {
+        "id" : 9,
+        "name" : "Furio Chagui",
+        "image" : "/image-placeholder.jpg",
+        "type" : "patada",
+        "belt": "blue",
+        "marked" : false
+    },
+    {
+        "id" : 10,
+        "name" : "Mondollyo Nacko Chagui",
+        "image" : "/image-placeholder.jpg",
+        "type" : "patada",
+        "belt": "blue",
+        "marked" : false
+    },
+    {
+        "id" : 11,
+        "name" : "Mondollyo Furio Chagui",
+        "image" : "/image-placeholder.jpg",
+        "type" : "patada",
+        "belt": "red",
+        "marked" : false
+    }
+]

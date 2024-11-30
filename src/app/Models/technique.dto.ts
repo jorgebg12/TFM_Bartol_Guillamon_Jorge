@@ -23,12 +23,12 @@ export class TechniqueDTO {
 }
 
 export enum Belt {
-  white,
-  yellow,
-  orange,
-  green,
-  blue,
-  red,
-  black,
-  superior,
+  white = 'white',
+  yellow = 'yellow',
+  orange = 'orange',
+  green = 'green',
+  blue = 'blue',
+  red = 'red',
+  black = 'black',
+  superior = 'superior',
 }
