@@ -1,11 +1,11 @@
 <div>
     <div class="row m-0">
-        <app-navbar></app-navbar>
+        <app-navbar  (changeTechniques)="TechniqueHandler($event)"></app-navbar>
     </div>
     <div class="container-md my-5">
         <div class="row">
             <app-search class="row"></app-search>
-            <div class="row">
+            <div class="row m-0 p-0">
                 <div class="col-12 col-md-9 d-flex flex-wrap justify-content-around gap-5">
                     <div *ngFor="let technique of techniqueList">
                         <app-card [technique]="technique"></app-card>
