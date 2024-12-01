@@ -1,40 +1,21 @@
 <div>
-    <div class="row">
+    <div class="row m-0">
         <app-navbar></app-navbar>
     </div>
     <div class="container-md my-5">
         <div class="row">
             <app-search class="row"></app-search>
-            <div class="row bg-primary">
+            <div class="row">
                 <div class="col-12 col-md-9 d-flex flex-wrap justify-content-around gap-5">
-                    <app-card>
-                    </app-card>
-                    <app-card>
-                    </app-card><app-card>
-                    </app-card><app-card>
-                    </app-card><app-card>
-                    </app-card><app-card>
-                    </app-card><app-card>
-                    </app-card><app-card>
-                    </app-card><app-card>
-                    </app-card><app-card>
-                    </app-card><app-card>
-                    </app-card><app-card>
-                    </app-card><app-card>
-                    </app-card><app-card>
-                    </app-card><app-card>
-                    </app-card><app-card>
-                    </app-card><app-card>
-                    </app-card>
+                    <div *ngFor="let technique of techniqueList">
+                        <app-card [technique]="technique"></app-card>
+                    </div>
                 </div>
-                
-                <app-sidenav class="col-3 d-none d-md-block">     
+
+                <app-sidenav class="col-3 d-none d-md-block">
                 </app-sidenav>
-    
             </div>
-            
+
         </div>
     </div>
-    
-    
 </div>

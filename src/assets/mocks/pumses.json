@@ -1,0 +1,66 @@
+[
+    
+    {
+        "id" : 1,
+        "name" : "Taeguk Il Chang",
+        "image" : "/image-placeholder.jpg",
+        "type" : "pumse",
+        "belt": "yellow",
+        "marked" : false
+    },
+    {
+        "id" : 2,
+        "name" : "Taeguk I Chang",
+        "image" : "/image-placeholder.jpg",
+        "type" : "pumse",
+        "belt": "orange",
+        "marked" : false
+    },
+    {
+        "id" : 3,
+        "name" : "Taeguk Sam Chang",
+        "image" : "/image-placeholder.jpg",
+        "type" : "pumse",
+        "belt": "orange",
+        "marked" : false
+    },
+    {
+        "id" : 4,
+        "name" : "Taeguk Sa Chang",
+        "image" : "/image-placeholder.jpg",
+        "type" : "pumse",
+        "belt": "green",
+        "marked" : false
+    },
+    {
+        "id" : 5,
+        "name" : "Taeguk Oh Chang",
+        "image" : "/image-placeholder.jpg",
+        "type" : "pumse",
+        "belt": "green",
+        "marked" : false
+    },
+    {
+        "id" : 6,
+        "name" : "Taeguk Yuk Chang",
+        "image" : "/image-placeholder.jpg",
+        "type" : "pumse",
+        "belt": "blue",
+        "marked" : false
+    },
+    {
+        "id" : 7,
+        "name" : "Taeguk Chil Chang",
+        "image" : "/image-placeholder.jpg",
+        "type" : "pumse",
+        "belt": "red",
+        "marked" : false
+    },{
+        "id" : 8,
+        "name" : "Taeguk Pal Chang",
+        "image" : "/image-placeholder.jpg",
+        "type" : "pumse",
+        "belt": "black",
+        "marked" : false
+    }
+]
