@@ -1,19 +1,21 @@
 <div>
     <div class="row m-0">
-        <app-navbar  (changeTechniques)="TechniqueHandler($event)"></app-navbar>
+        <app-navbar  (changeTechniques)="TechniqueHandler($event)" class="p-0"></app-navbar>
     </div>
-    <div class="container-md my-5">
+    <div class="container-md pt-2 pb-5 border-start border-end">
         <div class="row">
-            <app-search class="row"></app-search>
-            <div class="row m-0 p-0">
-                <div class="col-12 col-md-9 d-flex flex-wrap justify-content-around gap-5">
-                    <div *ngFor="let technique of techniqueList">
+
+            <app-search class="row py-4 justify-content-center justify-content-lg-start"></app-search>
+            <div class="row">
+
+                <div class="col-12 col-lg-9 d-flex flex-wrap justify-content-center gap-5">
+                    <div *ngFor="let technique of techniqueList" class="p-0 m-0">
                         <app-card [technique]="technique"></app-card>
                     </div>
                 </div>
 
-                <app-sidenav class="col-3 d-none d-md-block">
-                </app-sidenav>
+                <app-sidenav class="col-3 d-none d-lg-block"></app-sidenav>
+
             </div>
 
         </div>

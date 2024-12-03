@@ -2,7 +2,7 @@
     {
         "id" : 1,
         "name" : "Are Maki",
-        "image" : "/image-placeholder.jpg",
+        "image" : "/placeholder-defensa.jpg",
         "type" : "defensa",
         "belt": "yellow",
         "marked" : false
@@ -10,7 +10,7 @@
     {
         "id" : 2,
         "name" : "Montong An Maki",
-        "image" : "/image-placeholder.jpg",
+        "image" : "/placeholder-defensa.jpg",
         "type" : "defensa",
         "belt": "yellow",
         "marked" : false
@@ -18,7 +18,7 @@
     {
         "id" : 3,
         "name" : "Montong Maki",
-        "image" : "/image-placeholder.jpg",
+        "image" : "/placeholder-defensa.jpg",
         "type" : "defensa",
         "belt": "yellow",
         "marked" : false
@@ -26,7 +26,7 @@
     {
         "id" : 4,
         "name" : "Olgul Maki",
-        "image" : "/image-placeholder.jpg",
+        "image" : "/placeholder-defensa.jpg",
         "type" : "defensa",
         "belt": "yellow",
         "marked" : false
@@ -34,7 +34,7 @@
     {
         "id" : 5,
         "name" : "Jansonnal Montong Bakat Maki",
-        "image" : "/image-placeholder.jpg",
+        "image" : "/placeholder-defensa.jpg",
         "type" : "defensa",
         "belt": "orange",
         "marked" : false
@@ -42,7 +42,7 @@
     {
         "id" : 6,
         "name" : "Sonnal Montong Maki",
-        "image" : "/image-placeholder.jpg",
+        "image" : "/placeholder-defensa.jpg",
         "type" : "defensa",
         "belt": "green",
         "marked" : false
@@ -50,7 +50,7 @@
     {
         "id" : 7,
         "name" : "Montong Bakat Maki",
-        "image" : "/image-placeholder.jpg",
+        "image" : "/placeholder-defensa.jpg",
         "type" : "defensa",
         "belt": "green",
         "marked" : false
@@ -58,7 +58,7 @@
     {
         "id" : 8,
         "name" : "Olgul Bakat Maki",
-        "image" : "/image-placeholder.jpg",
+        "image" : "/placeholder-defensa.jpg",
         "type" : "defensa",
         "belt": "green",
         "marked" : false
@@ -66,7 +66,7 @@
     {
         "id" : 9,
         "name" : "Gechio Are Maki",
-        "image" : "/image-placeholder.jpg",
+        "image" : "/placeholder-defensa.jpg",
         "type" : "defensa",
         "belt": "green",
         "marked" : false
@@ -74,7 +74,7 @@
     {
         "id" : 10,
         "name" : "Batangson Montong Maki",
-        "image" : "/image-placeholder.jpg",
+        "image" : "/placeholder-defensa.jpg",
         "type" : "defensa",
         "belt": "green",
         "marked" : false
@@ -82,7 +82,7 @@
     {
         "id" : 11,
         "name" : "Batangson Montong An Maki",
-        "image" : "/image-placeholder.jpg",
+        "image" : "/placeholder-defensa.jpg",
         "type" : "defensa",
         "belt": "green",
         "marked" : false
@@ -90,7 +90,7 @@
     {
         "id" : 12,
         "name" : "Sonnal Are Maki",
-        "image" : "/image-placeholder.jpg",
+        "image" : "/placeholder-defensa.jpg",
         "type" : "defensa",
         "belt": "blue",
         "marked" : false
@@ -98,7 +98,7 @@
     {
         "id" : 13,
         "name" : "Goduro Batangson Montong An Maki",
-        "image" : "/image-placeholder.jpg",
+        "image" : "/placeholder-defensa.jpg",
         "type" : "defensa",
         "belt": "blue",
         "marked" : false
@@ -106,7 +106,7 @@
     {
         "id" : 14,
         "name" : "Gechio Montong Maki",
-        "image" : "/image-placeholder.jpg",
+        "image" : "/placeholder-defensa.jpg",
         "type" : "defensa",
         "belt": "blue",
         "marked" : false
@@ -114,7 +114,7 @@
     {
         "id" : 15,
         "name" : "Okgoro Are Maki",
-        "image" : "/image-placeholder.jpg",
+        "image" : "/placeholder-defensa.jpg",
         "type" : "defensa",
         "belt": "blue",
         "marked" : false
@@ -122,7 +122,7 @@
     {
         "id" : 16,
         "name" : "Jansonnal Montong Yop Maki",
-        "image" : "/image-placeholder.jpg",
+        "image" : "/placeholder-defensa.jpg",
         "type" : "defensa",
         "belt": "blue",
         "marked" : false
@@ -130,7 +130,7 @@
     {
         "id" : 17,
         "name" : "Goduro Montong Maki",
-        "image" : "/image-placeholder.jpg",
+        "image" : "/placeholder-defensa.jpg",
         "type" : "defensa",
         "belt": "red",
         "marked" : false
@@ -138,7 +138,7 @@
     {
         "id" : 18,
         "name" : "Goduro Are Maki",
-        "image" : "/image-placeholder.jpg",
+        "image" : "/placeholder-defensa.jpg",
         "type" : "defensa",
         "belt": "red",
         "marked" : false

@@ -2,7 +2,7 @@
     {
         "id" : 1,
         "name" : "Kibon Chumbi",
-        "image" : "/image-placeholder.jpg",
+        "image" : "/placeholder-pum.jpg",
         "type" : "pum",
         "belt": "yellow",
         "marked" : false
@@ -10,7 +10,7 @@
     {
         "id" : 2,
         "name" : "Chebipum Mok Chigui",
-        "image" : "/image-placeholder.jpg",
+        "image" : "/placeholder-pum.jpg",
         "type" : "pum",
         "belt": "green",
         "marked" : false
@@ -18,7 +18,7 @@
     {
         "id" : 3,
         "name" : "Momtong Piochok Palkup Chigui",
-        "image" : "/image-placeholder.jpg",
+        "image" : "/placeholder-pum.jpg",
         "type" : "pum",
         "belt": "green",
         "marked" : false
@@ -26,7 +26,7 @@
     {
         "id" : 4,
         "name" : "Bituro Jansonnal Olgul Bakat Maki",
-        "image" : "/image-placeholder.jpg",
+        "image" : "/placeholder-pum.jpg",
         "type" : "pum",
         "belt": "blue",
         "marked" : false
@@ -34,7 +34,7 @@
     {
         "id" : 5,
         "name" : "Bo Chumok Chumbi",
-        "image" : "/image-placeholder.jpg",
+        "image" : "/placeholder-pum.jpg",
         "type" : "pum",
         "belt": "blue",
         "marked" : false
@@ -42,7 +42,7 @@
     {
         "id" : 6,
         "name" : "Gawi Maki",
-        "image" : "/image-placeholder.jpg",
+        "image" : "/placeholder-pum.jpg",
         "type" : "pum",
         "belt": "blue",
         "marked" : false
@@ -51,7 +51,7 @@
     {
         "id" : 7,
         "name" : "Dubong Gawi Maki",
-        "image" : "/image-placeholder.jpg",
+        "image" : "/placeholder-pum.jpg",
         "type" : "pum",
         "belt": "blue",
         "marked" : false
@@ -59,7 +59,7 @@
     {
         "id" : 8,
         "name" : "Dangkio Ollyo Murup Chigui",
-        "image" : "/image-placeholder.jpg",
+        "image" : "/placeholder-pum.jpg",
         "type" : "pum",
         "belt": "blue",
         "marked" : false
@@ -67,7 +67,7 @@
     {
         "id" : 9,
         "name" : "Piochok Chagui",
-        "image" : "/image-placeholder.jpg",
+        "image" : "/placeholder-pum.jpg",
         "type" : "pum",
         "belt": "blue",
         "marked" : false
@@ -75,7 +75,7 @@
     {
         "id" : 10,
         "name" : "Oe Santul Maki",
-        "image" : "/image-placeholder.jpg",
+        "image" : "/placeholder-pum.jpg",
         "type" : "pum",
         "belt": "red",
         "marked" : false
@@ -83,7 +83,7 @@
     {
         "id" : 11,
         "name" : "Dangkio Tok Jirugui",
-        "image" : "/image-placeholder.jpg",
+        "image" : "/placeholder-pum.jpg",
         "type" : "pum",
         "belt": "red",
         "marked" : false

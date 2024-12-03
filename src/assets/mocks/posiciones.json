@@ -2,7 +2,7 @@
     {
         "id" : 1,
         "name" : "Charyot Sogui",
-        "image" : "/image-placeholder.jpg",
+        "image" : "/placeholder-posicion.jpg",
         "type" : "posicion",
         "belt": "yellow",
         "marked" : false
@@ -10,7 +10,7 @@
     {
         "id" : 2,
         "name" : "Pionji Sogui",
-        "image" : "/image-placeholder.jpg",
+        "image" : "/placeholder-posicion.jpg",
         "type" : "posicion",
         "belt": "yellow",
         "marked" : false
@@ -18,7 +18,7 @@
     {
         "id" : 3,
         "name" : "Moa Sogui",
-        "image" : "/image-placeholder.jpg",
+        "image" : "/placeholder-posicion.jpg",
         "type" : "posicion",
         "belt": "yellow",
         "marked" : false
@@ -26,7 +26,7 @@
     {
         "id" : 4,
         "name" : "Ap Sogui",
-        "image" : "/image-placeholder.jpg",
+        "image" : "/placeholder-posicion.jpg",
         "type" : "posicion",
         "belt": "yellow",
         "marked" : false
@@ -34,7 +34,7 @@
     {
         "id" : 5,
         "name" : "Ap Kubi Sogui",
-        "image" : "/image-placeholder.jpg",
+        "image" : "/placeholder-posicion.jpg",
         "type" : "posicion",
         "belt": "yellow",
         "marked" : false
@@ -42,7 +42,7 @@
     {
         "id" : 6,
         "name" : "Chuchum Sogui",
-        "image" : "/image-placeholder.jpg",
+        "image" : "/placeholder-posicion.jpg",
         "type" : "posicion",
         "belt": "yellow",
         "marked" : false
@@ -50,7 +50,7 @@
     {
         "id" : 7,
         "name" : "Tuit Kubi Sogui",
-        "image" : "/image-placeholder.jpg",
+        "image" : "/placeholder-posicion.jpg",
         "type" : "posicion",
         "belt": "orange",
         "marked" : false
@@ -58,7 +58,7 @@
     {
         "id" : 8,
         "name" : "Naranji Sogui",
-        "image" : "/image-placeholder.jpg",
+        "image" : "/placeholder-posicion.jpg",
         "type" : "posicion",
         "belt": "orange",
         "marked" : false
@@ -66,7 +66,7 @@
     {
         "id" : 9,
         "name" : "Tuit Koa Sogui",
-        "image" : "/image-placeholder.jpg",
+        "image" : "/placeholder-posicion.jpg",
         "type" : "posicion",
         "belt": "green",
         "marked" : false
@@ -74,7 +74,7 @@
     {
         "id" : 10,
         "name" : "App Koa Sogui",
-        "image" : "/image-placeholder.jpg",
+        "image" : "/placeholder-posicion.jpg",
         "type" : "posicion",
         "belt": "green",
         "marked" : false
@@ -82,7 +82,7 @@
     {
         "id" : 11,
         "name" : "Bom Sogui",
-        "image" : "/image-placeholder.jpg",
+        "image" : "/placeholder-posicion.jpg",
         "type" : "posicion",
         "belt": "blue",
         "marked" : false
@@ -90,7 +90,7 @@
     {
         "id" : 12,
         "name" : "Uen Sogui",
-        "image" : "/image-placeholder.jpg",
+        "image" : "/placeholder-posicion.jpg",
         "type" : "posicion",
         "belt": "blue",
         "marked" : false
@@ -98,7 +98,7 @@
     {
         "id" : 13,
         "name" : "Orum Sogui",
-        "image" : "/image-placeholder.jpg",
+        "image" : "/placeholder-posicion.jpg",
         "type" : "posicion",
         "belt": "blue",
         "marked" : false

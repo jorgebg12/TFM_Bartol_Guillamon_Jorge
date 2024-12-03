@@ -1,3 +1,5 @@
+@import "../node_modules/bootstrap/scss/bootstrap";
+
 li {
      list-style: none;
 }
@@ -5,3 +7,24 @@ li {
 .mt-10 {
      margin-top: 5rem;
  }
+
+.no-p {
+     padding: 0 !important;
+}
+
+.no-m {
+     margin: 0 !important;
+}
+
+.primary-bg {
+     background-color: $cyan-200;
+}
+
+.secondary-bg {
+     background-color: $gray-200;
+}
+
+.background-bg {
+     background-color:$gray-100;
+}
+

@@ -2,7 +2,7 @@
     {
         "id" : 1,
         "name" : "Montong Bande Jirugui",
-        "image" : "/image-placeholder.jpg",
+        "image" : "/placeholder-ataque.jpg",
         "type" : "ataque",
         "belt": "yellow",
         "marked" : false
@@ -10,7 +10,7 @@
     {
         "id" : 2,
         "name" : "Montong Baro Jirugui",
-        "image" : "/image-placeholder.jpg",
+        "image" : "/placeholder-ataque.jpg",
         "type" : "ataque",
         "belt": "yellow",
         "marked" : false
@@ -18,7 +18,7 @@
     {
         "id" : 3,
         "name" : "Montong Dubong Jirugui",
-        "image" : "/image-placeholder.jpg",
+        "image" : "/placeholder-ataque.jpg",
         "type" : "ataque",
         "belt": "yellow",
         "marked" : false
@@ -26,7 +26,7 @@
     {
         "id" : 4,
         "name" : "Olgul Bande Jirugui",
-        "image" : "/image-placeholder.jpg",
+        "image" : "/placeholder-ataque.jpg",
         "type" : "ataque",
         "belt": "orange",
         "marked" : false
@@ -34,7 +34,7 @@
     {
         "id" : 5,
         "name" : "Olgul Baro Jirugui",
-        "image" : "/image-placeholder.jpg",
+        "image" : "/placeholder-ataque.jpg",
         "type" : "ataque",
         "belt": "orange",
         "marked" : false
@@ -42,7 +42,7 @@
     {
         "id" : 6,
         "name" : "Sonnal An Chigui",
-        "image" : "/image-placeholder.jpg",
+        "image" : "/placeholder-ataque.jpg",
         "type" : "ataque",
         "belt": "orange",
         "marked" : false
@@ -50,7 +50,7 @@
     {
         "id" : 7,
         "name" : "Dung Chumok Ape Chigui",
-        "image" : "/image-placeholder.jpg",
+        "image" : "/placeholder-ataque.jpg",
         "type" : "ataque",
         "belt": "orange",
         "marked" : false
@@ -58,7 +58,7 @@
     {
         "id" : 8,
         "name" : "Palkup Dollyo Chigui",
-        "image" : "/image-placeholder.jpg",
+        "image" : "/placeholder-ataque.jpg",
         "type" : "ataque",
         "belt": "green",
         "marked" : false
@@ -66,7 +66,7 @@
     {
         "id" : 9,
         "name" : "Pioson Kut Seuo Jirugui",
-        "image" : "/image-placeholder.jpg",
+        "image" : "/placeholder-ataque.jpg",
         "type" : "ataque",
         "belt": "green",
         "marked" : false
@@ -74,7 +74,7 @@
     {
         "id" : 10,
         "name" : "Me Chumok Neryo Yop Chigui",
-        "image" : "/image-placeholder.jpg",
+        "image" : "/placeholder-ataque.jpg",
         "type" : "ataque",
         "belt": "green",
         "marked" : false
@@ -82,7 +82,7 @@
     {
         "id" : 11,
         "name" : "Du Checho Jirugui",
-        "image" : "/image-placeholder.jpg",
+        "image" : "/placeholder-ataque.jpg",
         "type" : "ataque",
         "belt": "blue",
         "marked" : false
@@ -90,7 +90,7 @@
     {
         "id" : 12,
         "name" : "Dung Chumok Bakat Chigui",
-        "image" : "/image-placeholder.jpg",
+        "image" : "/placeholder-ataque.jpg",
         "type" : "ataque",
         "belt": "blue",
         "marked" : false
@@ -98,7 +98,7 @@
     {
         "id" : 13,
         "name" : "Yop Jirugui",
-        "image" : "/image-placeholder.jpg",
+        "image" : "/placeholder-ataque.jpg",
         "type" : "ataque",
         "belt": "blue",
         "marked" : false
