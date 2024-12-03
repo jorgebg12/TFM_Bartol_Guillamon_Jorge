@@ -5,6 +5,7 @@ import {
   FormGroup,
   Validators,
 } from '@angular/forms';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -15,7 +16,7 @@ export class LoginComponent {
   password: FormControl;
   loginForm: FormGroup;
 
-  constructor(private formBuilder: FormBuilder) {
+  constructor(private formBuilder: FormBuilder, private router: Router) {
     this.email = new FormControl('', [
       Validators.required,
       Validators.pattern('[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,4}$'),
@@ -39,5 +40,9 @@ export class LoginComponent {
     }
 
     console.log(this.loginForm.value);
+  }
+
+  GoToRegister() {
+    this.router.navigateByUrl('/auth/register');
   }
 }

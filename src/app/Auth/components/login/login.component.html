@@ -14,16 +14,16 @@
                 <input class="form-control" type="password" name="password" id="userPasword" [formControl]="password">
             </div>
             <button 
-                class="btn btn-outline-primary align-self-center w-25" 
+                class="btn align-self-center w-25" 
                 type="submit" 
-                [disabled]="!loginForm.valid">
+                [disabled]="!loginForm.valid"[ngClass]="{
+        'btn-success': loginForm.valid,' btn-outline-primary' : !loginForm.valid}">
                 Iniciar sesión
             </button>
         </form>
     </div>
 
     <hr>
-
-    <button class="btn btn-primary align-self-center w-25">Registrarse</button>
+<button class="btn btn-primary align-self-center w-25" (click)="GoToRegister()">Registrarse</button>
 
 </div>

@@ -5,6 +5,7 @@ import {
   FormGroup,
   Validators,
 } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -18,7 +19,7 @@ export class RegisterComponent {
   password2: FormControl;
   registerForm: FormGroup;
 
-  constructor(private formBuilder: FormBuilder) {
+  constructor(private formBuilder: FormBuilder, private router: Router) {
     this.name = new FormControl('', [
       Validators.required,
       Validators.minLength(1),
@@ -60,7 +61,6 @@ export class RegisterComponent {
       this.registerForm.get('password2')?.value
     ) {
     }
-
-    console.log(this.registerForm.value);
+    this.router.navigateByUrl('');
   }
 }

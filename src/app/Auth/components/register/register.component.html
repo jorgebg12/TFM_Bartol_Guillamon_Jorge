@@ -28,7 +28,8 @@
             <button 
                 class="btn btn-outline-primary align-self-center w-25" 
                 type="submit" 
-                [disabled]="!registerForm.valid">
+                [disabled]="!registerForm.valid" [ngClass]="{
+        'btn-success': registerForm.valid,' btn-outline-primary' : !registerForm.valid}">
                 Registrarse
             </button>
 
