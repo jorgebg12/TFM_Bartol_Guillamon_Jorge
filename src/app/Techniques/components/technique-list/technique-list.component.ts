@@ -3,7 +3,6 @@ import { Store } from '@ngrx/store';
 import { AppState } from '../../../app.reducers';
 import { TechniqueDTO } from '../../../Models/technique.dto';
 import * as TechniquesActions from '../../actions';
-import { TechniquesService } from '../../Services/techniques.service';
 @Component({
   selector: 'app-technique-list',
   templateUrl: './technique-list.component.html',
@@ -12,16 +11,9 @@ import { TechniquesService } from '../../Services/techniques.service';
 export class TechniqueListComponent implements OnInit {
   techniqueList: TechniqueDTO[] = [];
 
-  constructor(
-    private techniqueService: TechniquesService,
-    private store: Store<AppState>
-  ) {}
+  constructor(private store: Store<AppState>) {}
 
   ngOnInit(): void {
-    this.store.select('techniques').subscribe((state) => {
-      this.techniqueList = state.techniques;
-    });
-
     this.LoadAtacks();
   }
 
@@ -42,18 +34,30 @@ export class TechniqueListComponent implements OnInit {
   }
 
   LoadAtacks(): void {
+    this.store.select('techniques').subscribe((state) => {
+      this.techniqueList = state.techniques;
+    });
     this.store.dispatch(TechniquesActions.getAllAtacks());
   }
 
   LoadDefenses(): void {
+    this.store.select('techniques').subscribe((state) => {
+      this.techniqueList = state.techniques;
+    });
     this.store.dispatch(TechniquesActions.getAllDefenses());
   }
 
   LoadPositions(): void {
+    this.store.select('techniques').subscribe((state) => {
+      this.techniqueList = state.techniques;
+    });
     this.store.dispatch(TechniquesActions.getAllPositions());
   }
 
   LoadPum(): void {
+    this.store.select('techniques').subscribe((state) => {
+      this.techniqueList = state.techniques;
+    });
     this.store.dispatch(TechniquesActions.getAllPum());
   }
 }
