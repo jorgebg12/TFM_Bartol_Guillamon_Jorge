@@ -11,6 +11,9 @@ export class TechniquesService {
 
   constructor(private http: HttpClient) {}
 
+  getAllTechniques(): Observable<TechniqueDTO[]> {
+    return this.http.get<TechniqueDTO[]>(this.apiUrl);
+  }
   getTechniquesAtack(): Observable<TechniqueDTO[]> {
     return this.http.get<TechniqueDTO[]>(this.apiUrl + '/atacks');
   }
