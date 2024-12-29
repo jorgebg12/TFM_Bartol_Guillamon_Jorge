@@ -7,21 +7,23 @@ import { TechniqueDTO } from '../../Models/technique.dto';
   providedIn: 'root',
 })
 export class TechniquesService {
+  private apiUrl = 'http://localhost:3000/api/techniques';
+
   constructor(private http: HttpClient) {}
 
   getTechniquesAtack(): Observable<TechniqueDTO[]> {
-    return this.http.get<TechniqueDTO[]>('/assets/mocks/ataques.json');
+    return this.http.get<TechniqueDTO[]>(this.apiUrl + '/atacks');
   }
 
   getTechniquesDefense(): Observable<TechniqueDTO[]> {
-    return this.http.get<TechniqueDTO[]>('/assets/mocks/defensas.json');
+    return this.http.get<TechniqueDTO[]>(this.apiUrl + '/defenses');
   }
 
   getTechniquesPosition(): Observable<TechniqueDTO[]> {
-    return this.http.get<TechniqueDTO[]>('/assets/mocks/posiciones.json');
+    return this.http.get<TechniqueDTO[]>(this.apiUrl + '/positions');
   }
 
   getTechniquesPum(): Observable<TechniqueDTO[]> {
-    return this.http.get<TechniqueDTO[]>('/assets/mocks/pum.json');
+    return this.http.get<TechniqueDTO[]>(this.apiUrl + '/pum');
   }
 }
