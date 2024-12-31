@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { AppState } from '../../../app.reducers';
 import { TechniqueDTO } from '../../../Models/technique.dto';
@@ -8,14 +8,20 @@ import * as TechniquesActions from '../../actions';
   templateUrl: './technique-list.component.html',
   styleUrl: './technique-list.component.scss',
 })
-export class TechniqueListComponent implements OnInit {
+export class TechniqueListComponent implements OnInit, OnDestroy {
   techniqueList: TechniqueDTO[] = [];
+  fiteredTechniqueList: TechniqueDTO[] = [];
 
   constructor(private store: Store<AppState>) {}
 
   ngOnInit(): void {
-    this.LoadAtacks();
+    this.store.select('techniques').subscribe((state) => {
+      this.techniqueList = state.techniques;
+      this.fiteredTechniqueList = state.techniques;
+    });
+    this.LoadPositions();
   }
+  ngOnDestroy(): void {}
 
   TechniqueHandler(type: string) {
     if (type === 'Atack') {
@@ -34,30 +40,24 @@ export class TechniqueListComponent implements OnInit {
   }
 
   LoadAtacks(): void {
-    this.store.select('techniques').subscribe((state) => {
-      this.techniqueList = state.techniques;
-    });
     this.store.dispatch(TechniquesActions.getAllAtacks());
   }
 
   LoadDefenses(): void {
-    this.store.select('techniques').subscribe((state) => {
-      this.techniqueList = state.techniques;
-    });
     this.store.dispatch(TechniquesActions.getAllDefenses());
   }
 
   LoadPositions(): void {
-    this.store.select('techniques').subscribe((state) => {
-      this.techniqueList = state.techniques;
-    });
     this.store.dispatch(TechniquesActions.getAllPositions());
   }
 
   LoadPum(): void {
-    this.store.select('techniques').subscribe((state) => {
-      this.techniqueList = state.techniques;
-    });
     this.store.dispatch(TechniquesActions.getAllPum());
+  }
+
+  OnSearchTechniques(userInput: string): void {
+    this.fiteredTechniqueList = this.techniqueList.filter((technique) => {
+      return technique.name.toLowerCase().includes(userInput.toLowerCase());
+    });
   }
 }

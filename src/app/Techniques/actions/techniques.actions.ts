@@ -55,3 +55,16 @@ export const getAllPumFailure = createAction(
   '[Techniques] Get all the pum failure',
   props<{ payload: HttpErrorResponse }>()
 );
+
+export const filterTechniquesByName = createAction(
+  '[Search] Filter the techniques by name',
+  props<{ userInput: string }>()
+);
+export const filterTechniquesByNameSuccess = createAction(
+  '[Search] Filter the techniques by name success',
+  props<{ TechniqueList: TechniqueDTO[] }>()
+);
+export const filterTechniquesByNameFailure = createAction(
+  '[Search] Filter the techniques by name failure',
+  props<{ payload: HttpErrorResponse }>()
+);

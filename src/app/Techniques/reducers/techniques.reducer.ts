@@ -4,14 +4,20 @@ import * as TechniquesActions from '../actions';
 
 export interface TechniqueState {
   techniques: TechniqueDTO[];
+  filteredTechniques: TechniqueDTO[];
   techniqe: TechniqueDTO;
+  filterName: string;
+  filterBelt: Belt | null;
   loading: boolean;
   loaded: boolean;
   error: any;
 }
 export const initialState: TechniqueState = {
   techniques: new Array<TechniqueDTO>(),
+  filteredTechniques: new Array<TechniqueDTO>(),
   techniqe: new TechniqueDTO(0, '', '', '', Belt.white),
+  filterName: '',
+  filterBelt: null,
   loading: false,
   loaded: false,
   error: null,
