@@ -113,6 +113,6 @@ const _techniquesReducer = createReducer(
 export function techniquesReducer(
   state: TechniqueState | undefined,
   action: Action
-) {
+): TechniqueState {
   return _techniquesReducer(state, action);
 }

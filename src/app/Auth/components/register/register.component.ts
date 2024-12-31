@@ -6,6 +6,10 @@ import {
   Validators,
 } from '@angular/forms';
 import { Router } from '@angular/router';
+import { Store } from '@ngrx/store';
+import { AppState } from '../../../app.reducers';
+import { UserRegisterDTO } from '../../../Models/user.dto';
+import * as AuthActions from '../../actions';
 
 @Component({
   selector: 'app-register',
@@ -19,7 +23,11 @@ export class RegisterComponent {
   password2: FormControl;
   registerForm: FormGroup;
 
-  constructor(private formBuilder: FormBuilder, private router: Router) {
+  constructor(
+    private formBuilder: FormBuilder,
+    private router: Router,
+    private store: Store<AppState>
+  ) {
     this.name = new FormControl('', [
       Validators.required,
       Validators.minLength(1),
@@ -60,7 +68,15 @@ export class RegisterComponent {
       this.registerForm.get('password1')?.value !=
       this.registerForm.get('password2')?.value
     ) {
+      return;
     }
-    this.router.navigateByUrl('');
+    const userData: UserRegisterDTO = {
+      email: this.registerForm.get('email')?.value,
+      username: this.registerForm.get('name')?.value,
+      password: this.registerForm.get('password1')?.value,
+    };
+    console.log(userData);
+
+    this.store.dispatch(AuthActions.registerUser({ User: userData }));
   }
 }
