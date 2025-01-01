@@ -1,15 +1,27 @@
-import { Injectable } from '@angular/core';
+import { Injectable, OnInit } from '@angular/core';
 import { Actions, createEffect, ofType } from '@ngrx/effects';
+import { Store } from '@ngrx/store';
 import { of } from 'rxjs';
-import { catchError, map, switchMap } from 'rxjs/operators';
+import { catchError, map, switchMap, withLatestFrom } from 'rxjs/operators';
+import { AppState } from '../../app.reducers';
+import { Belt } from '../../Models/technique.dto';
 import * as TechniquesActions from '../actions/index';
 import { TechniquesService } from '../Services/techniques.service';
 @Injectable()
-export class TechniquesEffects {
+export class TechniquesEffects implements OnInit {
+  userInput: string = '';
+  userBelt: Belt | null = null;
   constructor(
     private actions$: Actions,
-    private techniquesService: TechniquesService
+    private techniquesService: TechniquesService,
+    private store: Store<AppState>
   ) {}
+  ngOnInit(): void {
+    this.store.select('techniques').subscribe((state) => {
+      this.userInput = state.filterName;
+      this.userBelt = state.filterBelt;
+    });
+  }
 
   getAllTechniques$ = createEffect(() =>
     this.actions$.pipe(
@@ -97,6 +109,43 @@ export class TechniquesEffects {
             of(TechniquesActions.getAllPumFailure({ payload: error }))
           )
         )
+      )
+    )
+  );
+  intermediateFilterCall$ = createEffect(() =>
+    this.actions$.pipe(
+      ofType(
+        TechniquesActions.getAllPumSuccess,
+        TechniquesActions.getAllPositionsSuccess,
+        TechniquesActions.getAllDefensesSuccess,
+        TechniquesActions.getAllAtacksSuccess
+      ),
+      withLatestFrom(this.store.select((state) => state.techniques.filterName)),
+      map(([action, filterName]) =>
+        TechniquesActions.filterTechniquesByName({ userInput: filterName })
+      )
+    )
+  );
+
+  filterTechniquesByName$ = createEffect(() =>
+    this.actions$.pipe(
+      ofType(TechniquesActions.filterTechniquesByName),
+      withLatestFrom(this.store.select((state) => state.techniques.techniques)),
+      map(([{ userInput }, techniques]) => {
+        if (userInput === '') {
+          return TechniquesActions.filterTechniquesByNameSuccess({
+            TechniqueList: techniques,
+          });
+        }
+        const filteredTechniques = techniques.filter((technique) =>
+          technique.name.toLowerCase().includes(userInput.toLowerCase())
+        );
+        return TechniquesActions.filterTechniquesByNameSuccess({
+          TechniqueList: filteredTechniques,
+        });
+      }),
+      catchError((error) =>
+        of(TechniquesActions.filterTechniquesByNameFailure({ payload: error }))
       )
     )
   );

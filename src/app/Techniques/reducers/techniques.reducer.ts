@@ -113,6 +113,29 @@ const _techniquesReducer = createReducer(
     error: { payload },
     loading: false,
     loaded: false,
+  })),
+  on(TechniquesActions.filterTechniquesByName, (state, { userInput }) => ({
+    ...state,
+    filterName: userInput,
+    loading: true,
+    loaded: false,
+    error: null,
+  })),
+  on(
+    TechniquesActions.filterTechniquesByNameSuccess,
+    (state, { TechniqueList }) => ({
+      ...state,
+      filteredTechniques: TechniqueList,
+      loading: false,
+      loaded: true,
+    })
+  ),
+  on(TechniquesActions.filterTechniquesByNameFailure, (state, { payload }) => ({
+    ...state,
+    filterName: '',
+    error: { payload },
+    loading: false,
+    loaded: false,
   }))
 );
 

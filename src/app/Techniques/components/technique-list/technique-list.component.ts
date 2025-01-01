@@ -10,14 +10,12 @@ import * as TechniquesActions from '../../actions';
 })
 export class TechniqueListComponent implements OnInit, OnDestroy {
   techniqueList: TechniqueDTO[] = [];
-  fiteredTechniqueList: TechniqueDTO[] = [];
 
   constructor(private store: Store<AppState>) {}
 
   ngOnInit(): void {
     this.store.select('techniques').subscribe((state) => {
-      this.techniqueList = state.techniques;
-      this.fiteredTechniqueList = state.techniques;
+      this.techniqueList = state.filteredTechniques;
     });
     this.LoadPositions();
   }
@@ -56,7 +54,7 @@ export class TechniqueListComponent implements OnInit, OnDestroy {
   }
 
   OnSearchTechniques(userInput: string): void {
-    this.fiteredTechniqueList = this.techniqueList.filter((technique) => {
+    this.techniqueList = this.techniqueList.filter((technique) => {
       return technique.name.toLowerCase().includes(userInput.toLowerCase());
     });
   }
