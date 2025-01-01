@@ -1,6 +1,6 @@
 import { HttpErrorResponse } from '@angular/common/http';
 import { createAction, props } from '@ngrx/store';
-import { TechniqueDTO } from '../../Models/technique.dto';
+import { Belt, TechniqueDTO } from '../../Models/technique.dto';
 
 export const getAllTechniques = createAction(
   '[Techniques] Get all the techniques'
@@ -57,14 +57,18 @@ export const getAllPumFailure = createAction(
 );
 
 export const filterTechniquesByName = createAction(
-  '[Search] Filter the techniques by name',
+  '[Filter] Filter the techniques by name',
   props<{ userInput: string }>()
 );
-export const filterTechniquesByNameSuccess = createAction(
-  '[Search] Filter the techniques by name success',
+export const filterTechniquesByBelt = createAction(
+  '[Filter] Filter the techniques by belt',
+  props<{ userBelt: Belt | null }>()
+);
+export const filterTechniquesSuccess = createAction(
+  '[Filter] Filter success',
   props<{ TechniqueList: TechniqueDTO[] }>()
 );
-export const filterTechniquesByNameFailure = createAction(
-  '[Search] Filter the techniques by name failure',
+export const filterTechniquesFailure = createAction(
+  '[Filter] Filter failure',
   props<{ payload: HttpErrorResponse }>()
 );

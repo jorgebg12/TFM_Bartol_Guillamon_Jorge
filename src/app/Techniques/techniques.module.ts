@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CardComponent } from './components/card/card.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { SearchComponent } from './components/search/search.component';
@@ -17,6 +17,11 @@ import { TechniquesRoutingModule } from './techniques-routing.module';
     SidenavComponent,
     TechniqueListComponent,
   ],
-  imports: [CommonModule, TechniquesRoutingModule, ReactiveFormsModule],
+  imports: [
+    CommonModule,
+    TechniquesRoutingModule,
+    ReactiveFormsModule,
+    FormsModule,
+  ],
 })
 export class TechniquesModule {}

@@ -3,55 +3,53 @@
         <h3>Filtros</h3>
         <div>
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="belt" id="everythingInput" value="everything" checked>
-                <label class="form-check-label" for="everythingInput">
-                    Todas
-                </label>
+            <input class="form-check-input" type="radio" name="belt" id="everythingInput" [checked]="currentBelt === null" (change)="onBeltChange(null)">
+            <label class="form-check-label" for="everythingInput">
+            Todas
+            </label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="belt" id="whiteInput" value="whiteBelt">
-                <label class="form-check-label" for="whiteInput">
-                    Cinturón Blanco
-                </label>
+            <input class="form-check-input" type="radio" name="belt" id="whiteInput" [checked]="currentBelt === 'white'" (change)="onBeltChange('white')">
+            <label class="form-check-label" for="whiteInput">
+            Cinturón Blanco
+            </label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="belt" id="yellowInput" value="yellowBelt">
-                <label class="form-check-label" for="yellowInput">
-                    Cinturón Amarillo
-                </label>
+            <input class="form-check-input" type="radio" name="belt" id="yellowInput" [checked]="currentBelt === 'yellow'" (change)="onBeltChange('yellow')">
+            <label class="form-check-label" for="yellowInput">
+            Cinturón Amarillo
+            </label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="belt" id="orangeInput" value="orangeBelt">
-                <label class="form-check-label" for="orangeInput">
-                    Cinturón Naranja
-                </label>
+            <input class="form-check-input" type="radio" name="belt" id="orangeInput" [checked]="currentBelt === 'orange'" (change)="onBeltChange('orange')">
+            <label class="form-check-label" for="orangeInput">
+            Cinturón Naranja
+            </label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="belt" id="greenInput" value="greenBelt">
-                <label class="form-check-label" for="greenInput">
-                    Cinturón Verde
-                </label>
+            <input class="form-check-input" type="radio" name="belt" id="greenInput" [checked]="currentBelt === 'green'" (change)="onBeltChange('green')">
+            <label class="form-check-label" for="greenInput">
+            Cinturón Verde
+            </label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="belt" id="blueInput" value="blueBelt">
-                <label class="form-check-label" for="blueInput">
-                    Cinturón Azul
-                </label>
+            <input class="form-check-input" type="radio" name="belt" id="blueInput" [checked]="currentBelt === 'blue'" (change)="onBeltChange('blue')">
+            <label class="form-check-label" for="blueInput">
+            Cinturón Azul
+            </label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="belt" id="redInput" value="redBelt">
-                <label class="form-check-label" for="redInput">
-                    Cinturón Rojo
-                </label>
+            <input class="form-check-input" type="radio" name="belt" id="redInput" [checked]="currentBelt === 'red'" (change)="onBeltChange('red')">
+            <label class="form-check-label" for="redInput">
+            Cinturón Rojo
+            </label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="belt" id="blackInput" value="blackBelt">
-                <label class="form-check-label" for="blackInput">
-                    Cinturón Negro
-                </label>
+            <input class="form-check-input" type="radio" name="belt" id="blackInput" [checked]="currentBelt === 'black'" (change)="onBeltChange('black')">
+            <label class="form-check-label" for="blackInput">
+            Cinturón Negro
+            </label>
             </div>
-    
-
         </div>
     </div>
 </div>

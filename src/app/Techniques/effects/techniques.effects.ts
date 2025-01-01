@@ -120,32 +120,47 @@ export class TechniquesEffects implements OnInit {
         TechniquesActions.getAllDefensesSuccess,
         TechniquesActions.getAllAtacksSuccess
       ),
-      withLatestFrom(this.store.select((state) => state.techniques.filterName)),
-      map(([action, filterName]) =>
+      withLatestFrom(
+        this.store.select((state) => state.techniques.filterName),
+        this.store.select((state) => state.techniques.filterBelt)
+      ),
+      map(([_, filterName]) =>
         TechniquesActions.filterTechniquesByName({ userInput: filterName })
       )
     )
   );
 
-  filterTechniquesByName$ = createEffect(() =>
+  filterTechniques$ = createEffect(() =>
     this.actions$.pipe(
-      ofType(TechniquesActions.filterTechniquesByName),
-      withLatestFrom(this.store.select((state) => state.techniques.techniques)),
-      map(([{ userInput }, techniques]) => {
-        if (userInput === '') {
-          return TechniquesActions.filterTechniquesByNameSuccess({
-            TechniqueList: techniques,
-          });
-        }
-        const filteredTechniques = techniques.filter((technique) =>
-          technique.name.toLowerCase().includes(userInput.toLowerCase())
-        );
-        return TechniquesActions.filterTechniquesByNameSuccess({
+      ofType(
+        TechniquesActions.filterTechniquesByName,
+        TechniquesActions.filterTechniquesByBelt
+      ),
+      withLatestFrom(
+        this.store.select((state) => state.techniques.filterName),
+        this.store.select((state) => state.techniques.filterBelt),
+        this.store.select((state) => state.techniques.techniques)
+      ),
+      map(([_, filterName, filterBelt, techniques]) => {
+        const filteredTechniques = techniques.filter((technique) => {
+          if (filterBelt !== null) {
+            return (
+              technique.name.toLowerCase().includes(filterName.toLowerCase()) &&
+              technique.belt === filterBelt
+            );
+          } else {
+            return technique.name
+              .toLowerCase()
+              .includes(filterName.toLowerCase());
+          }
+        });
+
+        return TechniquesActions.filterTechniquesSuccess({
           TechniqueList: filteredTechniques,
         });
       }),
       catchError((error) =>
-        of(TechniquesActions.filterTechniquesByNameFailure({ payload: error }))
+        of(TechniquesActions.filterTechniquesFailure({ payload: error }))
       )
     )
   );

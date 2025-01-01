@@ -52,10 +52,4 @@ export class TechniqueListComponent implements OnInit, OnDestroy {
   LoadPum(): void {
     this.store.dispatch(TechniquesActions.getAllPum());
   }
-
-  OnSearchTechniques(userInput: string): void {
-    this.techniqueList = this.techniqueList.filter((technique) => {
-      return technique.name.toLowerCase().includes(userInput.toLowerCase());
-    });
-  }
 }

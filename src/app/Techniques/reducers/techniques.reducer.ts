@@ -121,16 +121,20 @@ const _techniquesReducer = createReducer(
     loaded: false,
     error: null,
   })),
-  on(
-    TechniquesActions.filterTechniquesByNameSuccess,
-    (state, { TechniqueList }) => ({
-      ...state,
-      filteredTechniques: TechniqueList,
-      loading: false,
-      loaded: true,
-    })
-  ),
-  on(TechniquesActions.filterTechniquesByNameFailure, (state, { payload }) => ({
+  on(TechniquesActions.filterTechniquesByBelt, (state, { userBelt }) => ({
+    ...state,
+    filterBelt: userBelt,
+    loading: true,
+    loaded: false,
+    error: null,
+  })),
+  on(TechniquesActions.filterTechniquesSuccess, (state, { TechniqueList }) => ({
+    ...state,
+    filteredTechniques: TechniqueList,
+    loading: false,
+    loaded: true,
+  })),
+  on(TechniquesActions.filterTechniquesFailure, (state, { payload }) => ({
     ...state,
     filterName: '',
     error: { payload },
