@@ -169,4 +169,66 @@ export class TechniquesEffects implements OnInit {
       )
     )
   );
+
+  markTechnique$ = createEffect(() =>
+    this.actions$.pipe(
+      ofType(TechniquesActions.markTechnique),
+      withLatestFrom(
+        this.store.select((state) => state.auth.user),
+        this.store.select((state) => state.techniques.techniques),
+        this.store.select((state) => state.techniques.filteredTechniques)
+      ),
+      switchMap(([action, user, techniques, filteredTechniques]) =>
+        this.techniquesService.markTechnique(user, action.technique).pipe(
+          map((technique) => {
+            const TechniqueList = techniques.map((current) =>
+              current.id === technique.id ? technique : current
+            );
+            const FilteredList = filteredTechniques.map((current) =>
+              current.id === technique.id ? technique : current
+            );
+            return TechniquesActions.markTechniqueSuccess({
+              technique,
+              TechniqueList,
+              FilteredList,
+            });
+          }),
+          catchError((error) =>
+            of(TechniquesActions.markTechniqueFailure({ payload: error }))
+          )
+        )
+      )
+    )
+  );
+
+  unmarkTechnique$ = createEffect(() =>
+    this.actions$.pipe(
+      ofType(TechniquesActions.unmarkTechnique),
+      withLatestFrom(
+        this.store.select((state) => state.auth.user),
+        this.store.select((state) => state.techniques.techniques),
+        this.store.select((state) => state.techniques.filteredTechniques)
+      ),
+      switchMap(([action, user, techniques, filteredTechniques]) =>
+        this.techniquesService.unmarkTechnique(user, action.technique).pipe(
+          map((technique) => {
+            const TechniqueList = techniques.map((current) =>
+              current.id === technique.id ? technique : current
+            );
+            const FilteredList = filteredTechniques.map((current) =>
+              current.id === technique.id ? technique : current
+            );
+            return TechniquesActions.unmarkTechniqueSuccess({
+              technique,
+              TechniqueList,
+              FilteredList,
+            });
+          }),
+          catchError((error) =>
+            of(TechniquesActions.unmarkTechniqueFailure({ payload: error }))
+          )
+        )
+      )
+    )
+  );
 }

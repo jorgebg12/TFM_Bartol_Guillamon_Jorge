@@ -35,4 +35,22 @@ export class TechniquesService {
       user ? `${this.apiUrl}/pum/${user.id}` : `${this.apiUrl}/pum`
     );
   }
+  markTechnique(
+    user: UserDTO | null,
+    technique: TechniqueDTO
+  ): Observable<TechniqueDTO> {
+    return this.http.post<TechniqueDTO>(`${this.apiUrl}/mark`, {
+      userId: user?.id,
+      techniqueId: technique.id,
+    });
+  }
+  unmarkTechnique(
+    user: UserDTO | null,
+    technique: TechniqueDTO
+  ): Observable<TechniqueDTO> {
+    return this.http.post<TechniqueDTO>(`${this.apiUrl}/unmark`, {
+      userId: user?.id,
+      techniqueId: technique.id,
+    });
+  }
 }

@@ -140,6 +140,54 @@ const _techniquesReducer = createReducer(
     error: { payload },
     loading: false,
     loaded: false,
+  })),
+  on(TechniquesActions.markTechnique, (state, { technique }) => ({
+    ...state,
+    techniqe: technique,
+    loading: true,
+    loaded: false,
+    error: null,
+  })),
+  on(
+    TechniquesActions.markTechniqueSuccess,
+    (state, { technique, TechniqueList, FilteredList }) => ({
+      ...state,
+      techniqe: technique,
+      techniques: TechniqueList,
+      filteredTechniques: FilteredList,
+      loading: false,
+      loaded: true,
+    })
+  ),
+  on(TechniquesActions.markTechniqueFailure, (state, { payload }) => ({
+    ...state,
+    error: { payload },
+    loading: false,
+    loaded: false,
+  })),
+  on(TechniquesActions.unmarkTechnique, (state, { technique }) => ({
+    ...state,
+    techniqe: technique,
+    loading: true,
+    loaded: false,
+    error: null,
+  })),
+  on(
+    TechniquesActions.unmarkTechniqueSuccess,
+    (state, { technique, TechniqueList, FilteredList }) => ({
+      ...state,
+      techniqe: technique,
+      techniques: TechniqueList,
+      filteredTechniques: FilteredList,
+      loading: false,
+      loaded: true,
+    })
+  ),
+  on(TechniquesActions.unmarkTechniqueFailure, (state, { payload }) => ({
+    ...state,
+    error: { payload },
+    loading: false,
+    loaded: false,
   }))
 );
 

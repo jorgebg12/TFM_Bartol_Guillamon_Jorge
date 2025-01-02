@@ -72,3 +72,41 @@ export const filterTechniquesFailure = createAction(
   '[Filter] Filter failure',
   props<{ payload: HttpErrorResponse }>()
 );
+
+export const markTechnique = createAction(
+  '[Mark] Mark the technique',
+  props<{ technique: TechniqueDTO }>()
+);
+
+export const markTechniqueSuccess = createAction(
+  '[Mark] Mark the technique success',
+  props<{
+    technique: TechniqueDTO;
+    TechniqueList: TechniqueDTO[];
+    FilteredList: TechniqueDTO[];
+  }>()
+);
+
+export const markTechniqueFailure = createAction(
+  '[Mark] Mark the technique failure',
+  props<{ payload: HttpErrorResponse }>()
+);
+
+export const unmarkTechnique = createAction(
+  '[Mark] Unmark the technique',
+  props<{ technique: TechniqueDTO }>()
+);
+
+export const unmarkTechniqueSuccess = createAction(
+  '[Mark] Unmark the technique success',
+  props<{
+    technique: TechniqueDTO;
+    TechniqueList: TechniqueDTO[];
+    FilteredList: TechniqueDTO[];
+  }>()
+);
+
+export const unmarkTechniqueFailure = createAction(
+  '[Mark] Unmark the technique failure',
+  props<{ payload: HttpErrorResponse }>()
+);
