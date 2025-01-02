@@ -44,8 +44,9 @@ export class TechniquesEffects implements OnInit {
   getAllAtacks$ = createEffect(() =>
     this.actions$.pipe(
       ofType(TechniquesActions.getAllAtacks),
-      switchMap(() =>
-        this.techniquesService.getTechniquesAtack().pipe(
+      withLatestFrom(this.store.select((state) => state.auth.user)),
+      switchMap(([_, user]) =>
+        this.techniquesService.getTechniquesAtack(user).pipe(
           map((techniques) =>
             TechniquesActions.getAllAtacksSuccess({
               TechniqueList: techniques,
@@ -62,8 +63,10 @@ export class TechniquesEffects implements OnInit {
   getAllDefenses$ = createEffect(() =>
     this.actions$.pipe(
       ofType(TechniquesActions.getAllDefenses),
-      switchMap(() =>
-        this.techniquesService.getTechniquesDefense().pipe(
+      withLatestFrom(this.store.select((state) => state.auth.user)),
+
+      switchMap(([_, user]) =>
+        this.techniquesService.getTechniquesDefense(user).pipe(
           map((techniques) =>
             TechniquesActions.getAllDefensesSuccess({
               TechniqueList: techniques,
@@ -80,8 +83,9 @@ export class TechniquesEffects implements OnInit {
   getAllPositions$ = createEffect(() =>
     this.actions$.pipe(
       ofType(TechniquesActions.getAllPositions),
-      switchMap(() =>
-        this.techniquesService.getTechniquesPosition().pipe(
+      withLatestFrom(this.store.select((state) => state.auth.user)),
+      switchMap(([_, user]) =>
+        this.techniquesService.getTechniquesPosition(user).pipe(
           map((techniques) =>
             TechniquesActions.getAllPositionsSuccess({
               TechniqueList: techniques,
@@ -98,8 +102,9 @@ export class TechniquesEffects implements OnInit {
   getAllPum$ = createEffect(() =>
     this.actions$.pipe(
       ofType(TechniquesActions.getAllPum),
-      switchMap(() =>
-        this.techniquesService.getTechniquesPum().pipe(
+      withLatestFrom(this.store.select((state) => state.auth.user)),
+      switchMap(([_, user]) =>
+        this.techniquesService.getTechniquesPum(user).pipe(
           map((techniques) =>
             TechniquesActions.getAllPumSuccess({
               TechniqueList: techniques,

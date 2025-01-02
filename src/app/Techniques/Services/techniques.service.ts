@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { TechniqueDTO } from '../../Models/technique.dto';
+import { UserDTO } from '../../Models/user.dto';
 
 @Injectable({
   providedIn: 'root',
@@ -14,19 +15,24 @@ export class TechniquesService {
   getAllTechniques(): Observable<TechniqueDTO[]> {
     return this.http.get<TechniqueDTO[]>(this.apiUrl);
   }
-  getTechniquesAtack(): Observable<TechniqueDTO[]> {
-    return this.http.get<TechniqueDTO[]>(this.apiUrl + '/atacks');
+  getTechniquesAtack(user: UserDTO | null): Observable<TechniqueDTO[]> {
+    return this.http.get<TechniqueDTO[]>(
+      user ? `${this.apiUrl}/atacks/${user.id}` : `${this.apiUrl}/atacks`
+    );
   }
-
-  getTechniquesDefense(): Observable<TechniqueDTO[]> {
-    return this.http.get<TechniqueDTO[]>(this.apiUrl + '/defenses');
+  getTechniquesDefense(user: UserDTO | null): Observable<TechniqueDTO[]> {
+    return this.http.get<TechniqueDTO[]>(
+      user ? `${this.apiUrl}/defenses/${user.id}` : `${this.apiUrl}/defenses`
+    );
   }
-
-  getTechniquesPosition(): Observable<TechniqueDTO[]> {
-    return this.http.get<TechniqueDTO[]>(this.apiUrl + '/positions');
+  getTechniquesPosition(user: UserDTO | null): Observable<TechniqueDTO[]> {
+    return this.http.get<TechniqueDTO[]>(
+      user ? `${this.apiUrl}/positions/${user.id}` : `${this.apiUrl}/positions`
+    );
   }
-
-  getTechniquesPum(): Observable<TechniqueDTO[]> {
-    return this.http.get<TechniqueDTO[]>(this.apiUrl + '/pum');
+  getTechniquesPum(user: UserDTO | null): Observable<TechniqueDTO[]> {
+    return this.http.get<TechniqueDTO[]>(
+      user ? `${this.apiUrl}/pum/${user.id}` : `${this.apiUrl}/pum`
+    );
   }
 }
