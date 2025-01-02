@@ -2,15 +2,30 @@
     <nav class="navbar mx-4 navbar-expand-sm primary-bg ms-0 me-0 px-3">
         <a class="navbar-brand" href="#">
             Taekwondo
-          </a>
-      
-        <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="/auth/login">Login</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/auth/register">Register</a>
-            </li>
-        </ul>
+        </a>
+        <button class="navbar-toggler" type="button" (click)="isCollapsed = !isCollapsed">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav" [class.show]="!isCollapsed">
+
+            <ul class="navbar-nav ms-auto" *ngIf="user===null; else loggedIn">
+                <li class="nav-item">
+                    <a class="nav-link" href="/auth/login">Iniciar Sesión</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/auth/register">Registrarse</a>
+                </li>
+            </ul>
+            <ng-template #loggedIn>
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item d-flex align-items-center">
+                        <span class="text-decoration-underline">{{user?.username }}</span>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" (click)="closeSession()">Cerrar Sesión</a>
+                    </li>
+                </ul>
+            </ng-template>
+        </div>
     </nav>
 </header>

@@ -52,4 +52,6 @@ export class TechniqueListComponent implements OnInit, OnDestroy {
   LoadPum(): void {
     this.store.dispatch(TechniquesActions.getAllPum());
   }
+
+  toggleSidenav() {}
 }

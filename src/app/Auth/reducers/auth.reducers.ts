@@ -57,6 +57,13 @@ const _authReducer = createReducer(
     loading: false,
     loaded: false,
     error: { payload },
+  })),
+  on(AuthActions.closeSession, (state) => ({
+    ...state,
+    user: null,
+    loading: false,
+    loaded: false,
+    error: null,
   }))
 );
 

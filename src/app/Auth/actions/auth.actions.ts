@@ -37,3 +37,5 @@ export const registerUserFailure = createAction(
   '[Register] Register user failure',
   props<{ payload: HttpErrorResponse }>()
 );
+
+export const closeSession = createAction('[Session] Close session');
