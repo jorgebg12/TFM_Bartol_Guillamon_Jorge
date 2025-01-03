@@ -9,6 +9,7 @@ import * as TechniquesActions from '../../actions';
   styleUrl: './technique-list.component.scss',
 })
 export class TechniqueListComponent implements OnInit, OnDestroy {
+  showFilter = false;
   techniqueList: TechniqueDTO[] = [];
 
   constructor(private store: Store<AppState>) {}
@@ -53,5 +54,7 @@ export class TechniqueListComponent implements OnInit, OnDestroy {
     this.store.dispatch(TechniquesActions.getAllPum());
   }
 
-  toggleSidenav() {}
+  toggleSidenav() {
+    this.showFilter = !this.showFilter;
+  }
 }

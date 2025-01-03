@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { AppState } from '../../../app.reducers';
 import { Belt } from '../../../Models/technique.dto';
@@ -10,6 +10,7 @@ import * as TechniquesActions from '../../actions';
 })
 export class SidenavComponent implements OnInit {
   currentBelt: Belt | null = null;
+  @Output() closeSidenav = new EventEmitter<void>();
 
   constructor(private store: Store<AppState>) {}
 
@@ -24,5 +25,9 @@ export class SidenavComponent implements OnInit {
     this.store.dispatch(
       TechniquesActions.filterTechniquesByBelt({ userBelt: selectedBelt })
     );
+  }
+
+  onCloseSidenav() {
+    this.closeSidenav.emit();
   }
 }

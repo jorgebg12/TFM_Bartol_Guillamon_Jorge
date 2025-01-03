@@ -17,14 +17,18 @@
             </div>
             <div class="row">
 
-                <div class="col-12 col-lg-9 d-flex flex-wrap justify-content-center gap-5">
+                <div class="col-12 col-lg-9 d-flex flex-wrap justify-content-center gap-5" >
                     <div *ngFor="let technique of techniqueList" class="p-0 m-0">
                         <app-card [technique]="technique"></app-card>
                     </div>
                     <p *ngIf="techniqueList.length===0">Ningun resultado</p>
                 </div>
-
-                <app-sidenav class="col-3 d-none d-lg-block"></app-sidenav>
+                <app-sidenav 
+                class="col-auto col-lg-3 d-lg-block position-lg-static default-state" 
+                [ngClass]="{
+                    'small-state end-0 top-20': showFilter
+                }" (closeSidenav)="toggleSidenav()">
+             </app-sidenav>
 
             </div>
 
