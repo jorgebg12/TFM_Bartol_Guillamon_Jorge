@@ -5,7 +5,7 @@ import * as TechniquesActions from '../actions';
 export interface TechniqueState {
   techniques: TechniqueDTO[];
   filteredTechniques: TechniqueDTO[];
-  techniqe: TechniqueDTO;
+  technique: TechniqueDTO;
   filterName: string;
   filterBelt: Belt | null;
   loading: boolean;
@@ -15,7 +15,7 @@ export interface TechniqueState {
 export const initialState: TechniqueState = {
   techniques: new Array<TechniqueDTO>(),
   filteredTechniques: new Array<TechniqueDTO>(),
-  techniqe: new TechniqueDTO(0, '', '', '', Belt.white),
+  technique: new TechniqueDTO(0, '', '', '', Belt.white),
   filterName: '',
   filterBelt: null,
   loading: false,
@@ -143,7 +143,7 @@ const _techniquesReducer = createReducer(
   })),
   on(TechniquesActions.markTechnique, (state, { technique }) => ({
     ...state,
-    techniqe: technique,
+    technique: technique,
     loading: true,
     loaded: false,
     error: null,
@@ -152,7 +152,7 @@ const _techniquesReducer = createReducer(
     TechniquesActions.markTechniqueSuccess,
     (state, { technique, TechniqueList, FilteredList }) => ({
       ...state,
-      techniqe: technique,
+      technique: technique,
       techniques: TechniqueList,
       filteredTechniques: FilteredList,
       loading: false,
@@ -167,7 +167,7 @@ const _techniquesReducer = createReducer(
   })),
   on(TechniquesActions.unmarkTechnique, (state, { technique }) => ({
     ...state,
-    techniqe: technique,
+    technique: technique,
     loading: true,
     loaded: false,
     error: null,
@@ -176,7 +176,7 @@ const _techniquesReducer = createReducer(
     TechniquesActions.unmarkTechniqueSuccess,
     (state, { technique, TechniqueList, FilteredList }) => ({
       ...state,
-      techniqe: technique,
+      technique: technique,
       techniques: TechniqueList,
       filteredTechniques: FilteredList,
       loading: false,
