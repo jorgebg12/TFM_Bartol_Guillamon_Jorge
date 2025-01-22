@@ -8,7 +8,7 @@ import { UserDTO } from '../../Models/user.dto';
   providedIn: 'root',
 })
 export class TechniquesService {
-  private apiUrl = 'http://localhost:3000/api/techniques';
+  private apiUrl = 'https://tfmtaekwondoapi.up.railway.app/api/techniques';
 
   constructor(private http: HttpClient) {}
 

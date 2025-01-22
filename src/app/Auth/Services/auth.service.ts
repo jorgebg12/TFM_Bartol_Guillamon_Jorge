@@ -7,7 +7,7 @@ import { UserDTO, UserLoginDTO, UserRegisterDTO } from '../../Models/user.dto';
   providedIn: 'root',
 })
 export class AuthService {
-  private apiUrl = 'http://localhost:3000/user';
+  private apiUrl = 'https://tfmtaekwondoapi.up.railway.app/user';
 
   constructor(private http: HttpClient) {}
 

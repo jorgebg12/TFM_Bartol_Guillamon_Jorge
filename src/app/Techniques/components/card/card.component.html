@@ -1,5 +1,7 @@
 <div class="card" style="width: 400px;">
-  <img [src]="technique.image" class="card-img-top" alt="...">
+  <div class="border-bottom rounded-top" style="height: 200px; background-color: white; padding: 5px;" >
+    <img [src]="technique.image" class="card-img-top w-100 h-100 object-fit-contain" [alt]="technique.name + ' image'">
+  </div>
   <div class="card-body">
     <div class="d-flex flex-row flex-wrap justify-content-between align-items-center">
       <span class="card-text my-auto fst-italic">{{technique.name}}</span>
